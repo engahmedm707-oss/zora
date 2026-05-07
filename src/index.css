@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap");
+
+:root {
+  --ebony: #1c1410;
+  --gold: #d4af7a;
+  --amber: #9c7e52;
+  --cream: #faf7f2;
+  --linen: #eae2d6;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--ebony);
+  color: var(--linen);
+  font-family: "Lato", sans-serif;
+  direction: rtl; /* اتجاه من اليمين لليسار */
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+.logo-wordmark {
+  font-family: "Playfair Display", serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+/* تنسيق خطوط SweetAlert ليتناسب مع المتجر */
+.swal2-popup {
+  font-family: "Playfair Display", serif !important;
+  border: 1px solid rgba(212, 175, 122, 0.2);
+  border-radius: 0; /* زوايا حادة للفخامة */
+}
+
+.swal2-title {
+  font-size: 1.8rem !important;
+}

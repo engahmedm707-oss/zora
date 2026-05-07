@@ -1,0 +1,199 @@
+/* --- إعدادات الصفحة --- */
+.shop-page {
+  background-color: #16110e;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.shop-header-section {
+  position: relative;
+  padding: 100px 5% 50px;
+  text-align: center;
+  background: radial-gradient(circle at center, #2d231d 0%, #16110e 100%);
+  overflow: hidden;
+}
+
+.header-bg-glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: var(--gold);
+  filter: blur(120px);
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.pre-title {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 0.7rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.shop-header-section h1 {
+  font-size: 3rem;
+  color: var(--cream);
+  font-family: "Playfair Display", serif;
+}
+
+.shop-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  font-size: 0.75rem;
+  color: var(--amber);
+}
+
+/* --- نظام الشبكة (4 أعمدة) --- */
+.shop-container-fluid {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 4%;
+}
+
+.products-grid {
+  display: grid;
+  /* الأساس: 4 أعمدة في الشاشات الكبيرة */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* --- تصميم الكارت المطور --- */
+.art-card {
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.art-card-inner {
+  background: #1f1814; /* لون التباين */
+  padding: 10px;
+  border: 1px solid rgba(212, 175, 122, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  aspect-ratio: 4 / 5; /* يحافظ على تناسق أبعاد الصور */
+  overflow: hidden;
+  background: #16110e;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 17, 14, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.card-overlay span {
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  backdrop-filter: blur(4px);
+}
+
+/* --- الهوفر --- */
+.art-card:hover .art-card-inner {
+  background: #251d19;
+  border-color: var(--gold);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.art-card:hover .image-container img {
+  transform: scale(1.08);
+}
+
+.art-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* --- تفاصيل المنتج --- */
+.art-details {
+  padding: 15px 5px 5px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.art-cat {
+  font-size: 0.65rem;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.art-price {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.art-details h3 {
+  color: var(--cream);
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+/* --- التوافق مع الشاشات (Responsiveness) --- */
+
+/* الشاشات المتوسطة (لابتوب صغير/تابلت كبير) */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+  }
+}
+
+/* التابلت */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* عمودين */
+  }
+}
+
+/* الموبايل */
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* عمودين كما طلبت */
+    gap: 15px; /* تقليل المسافة في الموبايل */
+  }
+
+  .art-card-inner {
+    padding: 6px; /* تقليل الحشو لزيادة مساحة الصورة */
+  }
+
+  .shop-header-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .art-details h3 {
+    font-size: 0.9rem;
+  }
+}

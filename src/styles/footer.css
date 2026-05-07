@@ -1,0 +1,126 @@
+.zaura-footer {
+  background-color: var(--ebony);
+  padding: 80px 5% 20px;
+  border-top: 1px solid rgba(212, 175, 122, 0.1);
+  color: var(--linen);
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+.footer-column h3 {
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--gold);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.brand-desc {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.footer-column ul li a:hover {
+  opacity: 1;
+  color: var(--gold);
+  padding-right: 5px; /* حركة بسيطة عند الهوفر */
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 122, 0.3);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--gold);
+  color: var(--ebony);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 1300px;
+  margin: 60px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 15px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .contact-info li {
+    justify-content: center;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

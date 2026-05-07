@@ -1,0 +1,241 @@
+/* ============================================================
+   Home Styles - Luxury Minimalist
+   ============================================================ */
+
+/* Hero Section */
+.hero {
+  height: 85vh;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070")
+    center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 20, 16, 0.8),
+    rgba(28, 20, 16, 0.6)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-subtitle {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  color: var(--cream);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  color: var(--linen);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--ebony);
+  padding: 14px 40px;
+  font-weight: bold;
+  margin: 10px;
+  transition: var(--transition);
+}
+
+.btn-secondary {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 14px 40px;
+  margin: 10px;
+}
+
+.btn-primary:hover {
+  background: var(--amber);
+}
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--ebony);
+}
+
+/* Categories Section */
+.featured-categories {
+  padding: 100px 5%;
+  background-color: var(--ebony);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  color: var(--gold);
+  margin-top: 10px;
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+  background: var(--amber);
+  margin: 20px auto;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.category-card {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.cat-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #251c17; /* لون احتياطي */
+  transition: transform 0.8s ease;
+  z-index: 1;
+}
+
+.category-card:hover .cat-img {
+  transform: scale(1.1);
+}
+
+.cat-info {
+  position: relative;
+  z-index: 2;
+  border-right: 2px solid var(--gold);
+  padding-right: 20px;
+}
+
+.cat-info h3 {
+  font-size: 2.2rem;
+  color: var(--cream);
+}
+.cat-info p {
+  color: var(--amber);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+/* Products Section */
+.featured-products {
+  padding: 100px 5%;
+  background: #150f0c; /* درجة أغمق قليلاً للتمييز */
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  border: 1px solid rgba(212, 175, 122, 0.05);
+  transition: var(--transition);
+}
+
+.product-image {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.08);
+}
+
+.product-actions {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  transition: var(--transition);
+}
+
+.product-card:hover .product-actions {
+  bottom: 0;
+}
+
+.product-actions button {
+  width: 100%;
+  background: var(--gold);
+  color: var(--ebony);
+  padding: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.product-info h3 {
+  color: var(--cream);
+  margin-bottom: 5px;
+}
+.product-category {
+  color: var(--amber);
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+.product-price {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .category-card {
+    height: 350px;
+  }
+}

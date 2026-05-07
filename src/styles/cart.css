@@ -1,0 +1,233 @@
+.cart-page {
+  background-color: #16110e;
+  min-height: 100vh;
+  padding: 140px 5% 80px;
+  color: var(--linen);
+}
+
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cart-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+.cart-title span {
+  font-size: 1.1rem;
+  color: var(--amber);
+  opacity: 0.6;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 50px;
+  align-items: start;
+}
+
+/* قائمة المنتجات */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(212, 175, 122, 0.1);
+}
+
+.item-img {
+  width: 120px;
+  height: 140px;
+  background: #1a1410;
+  border: 1px solid rgba(212, 175, 122, 0.1);
+}
+
+.item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.item-unit-price {
+  color: var(--gold);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(212, 175, 122, 0.3);
+  padding: 5px;
+}
+
+.qty-stepper button {
+  background: none;
+  border: none;
+  color: var(--gold);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.qty-stepper span {
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  opacity: 1;
+}
+
+.item-total-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--cream);
+}
+
+.continue-link {
+  margin-top: 30px;
+  background: none;
+  border: none;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* ملخص السلة */
+.summary-card {
+  background: #1a1410;
+  padding: 30px;
+  border: 1px solid rgba(212, 175, 122, 0.1);
+  position: sticky;
+  top: 140px;
+}
+
+.summary-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: var(--gold);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.summary-divider {
+  height: 1px;
+  background: rgba(212, 175, 122, 0.1);
+  margin: 20px 0;
+}
+
+.summary-row.total {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--cream);
+}
+
+.checkout-btn {
+  width: 100%;
+  height: 60px;
+  background: var(--gold);
+  color: #1a1410;
+  border: none;
+  margin-top: 30px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background: var(--amber);
+  transform: translateY(-3px);
+}
+
+.secure-note {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 20px;
+  opacity: 0.5;
+}
+
+/* حالة السلة الفارغة */
+.empty-cart {
+  text-align: center;
+  padding: 200px 5%;
+}
+
+.empty-cart svg {
+  color: var(--gold);
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+.empty-cart h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: var(--cream);
+}
+.empty-cart p {
+  color: var(--linen);
+  opacity: 0.6;
+  margin: 15px 0 30px;
+}
+.go-shop-btn {
+  background: var(--gold);
+  color: #1a1410;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ريسبونسيف */
+@media (max-width: 992px) {
+  .cart-grid {
+    grid-template-columns: 1fr;
+  }
+  .cart-summary {
+    position: static;
+  }
+  .item-total-price {
+    display: none;
+  } /* تظهر تحت الاسم في الموبايل لو حابب */
+}
